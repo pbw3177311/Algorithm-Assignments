@@ -1,0 +1,19 @@
+//Given an array of integers, find two numbers 
+//such that they add up to a specific target number.
+
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] index= new int[2];
+        int i, j;
+        for(i = 0; i < nums.length - 1; i++){
+            for(j = i + 1; j < nums.length; j++){
+                if(target != (nums[i] + nums[j])){
+                    continue;
+                }//if
+                index[0] = i + 1;
+                index[1] = j + 1;
+            }//for j
+        }//for i
+        return index;
+    }
+}
